@@ -5,7 +5,7 @@ pipeline {
             // 指定自定义 Docker 镜像
             image 'maven:3-alpine'
             // 挂载卷
-            volumes '-v /root/.m2:/root/.m2'
+            args '-v /root/.m2:/root/.m2'
         }
     }
 
