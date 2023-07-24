@@ -3,7 +3,7 @@ pipeline {
     agent {
         docker {
             // 指定自定义 Docker 镜像
-            image 'maven:3-alpine'
+            image 'maven:3.9.0'
             // 挂载卷
             args '-v /root/.m2:/root/.m2'
         }
