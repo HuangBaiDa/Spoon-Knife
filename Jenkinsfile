@@ -27,7 +27,12 @@ pipeline {
                             junit 'target/surefire-reports/*.xml'
                         }
                     }
-                }
+        }
         // 添加其他流水线阶段和步骤
+        stage('Deliver') {
+                steps {
+                    sh './jenkins/scripts/deliver.sh'
+                }
+        }
     }
 }
